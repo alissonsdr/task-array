@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <title>Suas Informações</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="title">SUAS INFORMAÇÕES</div>
+        <div class="boards">
+
+            <div class="board-left">
+                <div class="infos">
+                    <div class="title-input">Nome</div>
+                    <input type="text" class="input-info" id="name">
+                    <div class="title-input">Sobrenome</div>
+                    <input type="text" class="input-info" id="subName">
+                    <div class="title-input">Cidade</div>
+                    <input type="text" class="input-info" id="city">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="button-save" onclick="save()">Salvar</button>
+                    <div class="ajust-buttons">
+                        <button type="submit" class="button" onclick="verify()">Verificar</button>
+                        <button type="submit" class="button" onclick="reset()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-right">
+                <div id="output" class="output"></div>
+            </div>
+        </div>
+
+        <div id="verifyName" class="verify"></div>
+        <div id="verifySubName" class="verify"></div>
+        <div id="verifyCity" class="verify"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
