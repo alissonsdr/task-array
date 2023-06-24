@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #27272a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 600px;
+    width: 720px;
+    background-color: #474747;
+    border-radius: 15px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.boards {
+    display: flex;
+    flex-direction: row;
+    width: 720px;
+    justify-content: space-around;
+}
+
+.board-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board-right {
+    height: 300px;
+    width: 235px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-input {
+    color: white;
+}
+
+.input-info {
+    padding-inline-start: 10px;
+    margin-bottom: 15px;
+    height: 25px;
+    width: 180px;
+    color: white;
+    border-radius: 6px;
+    background-color: rgba(65, 65, 65, 0);
+    border: solid 1px rgb(131, 131, 131);
+}
+
+.input-info:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.ajust-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-save {
+    margin-top: 30px;
+    width: 180px;
+    height: 30px;
+    background-color: rgb(133, 23, 23);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.11);
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+
+.button-save:hover {
+    background-color: rgb(122, 21, 21);
+}
+
+.button {
+    margin-top: 10px;
+    width: 85px;
+    height: 30px;
+    background-color: rgb(133, 23, 23);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.11);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button:hover {
+    background-color: rgb(122, 21, 21);
+}
+
+.verify {
+    width: 200px;
+    height: 10px;
+    color: white;
+    margin-top: 10px;
+}
