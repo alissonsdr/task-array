@@ -121,3 +121,9 @@ body {
     color: white;
     margin-top: 10px;
 }
+
+.output{
+    height: 310px;
+    width: 250px;
+    overflow: auto;
+}
