@@ -17,7 +17,7 @@
         <div class="boards">
 
             <div class="board-left">
-                <div class="infos">
+                <div class="get-infos">
                     <div class="title-input">Nome</div>
                     <input type="text" class="input-info" id="name">
                     <div class="title-input">Sobrenome</div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="buttons">
                     <button type="submit" class="button-save" onclick="save()">Salvar</button>
-                    <div class="ajust-buttons">
+                    <div class="adjust-buttons">
                         <button type="submit" class="button" onclick="verify()">Verificar</button>
                         <button type="submit" class="button" onclick="reset()">Limpar</button>
                     </div>
@@ -38,10 +38,11 @@
                 <div id="output" class="output"></div>
             </div>
         </div>
-
-        <div id="verifyName" class="verify"></div>
-        <div id="verifySubName" class="verify"></div>
-        <div id="verifyCity" class="verify"></div>
+        
+        <div class="verify">
+            <div id="verifyName" class="verify-name"></div>
+            <div id="verifyCity" class="verify-city"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
