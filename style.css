@@ -74,7 +74,7 @@ body {
     outline: 0;
 }
 
-.ajust-buttons {
+.adjust-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -117,9 +117,23 @@ body {
 
 .verify {
     width: 200px;
-    height: 10px;
+    height: 80px;
     color: white;
-    margin-top: 10px;
+    margin-top: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.verify-name{
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+.verify-city{
+    text-align: center;
+    border-radius: 10px;
 }
 
 .output{
