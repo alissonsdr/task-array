@@ -13,12 +13,13 @@ function save() {
     infoPerson.push(firstName.value, subName.value, city.value)
 
     let createList = ''
-    infoPerson.forEach(getValues)
+
+    infoPerson.map(getValues)
 
     output.innerHTML = createList
 
-    function getValues(value, index, array) {
-        createList += index + " - " + value + "<br>"
+    function getValues(value, index) {
+         createList += index + " - " + value + "<br>"
     }
 }
 
