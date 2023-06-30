@@ -12,22 +12,19 @@ function save() {
 
     infoPerson.push(firstName.value, subName.value, city.value)
 
-    let createList = ''
+    let mapInfoPerson = infoPerson.map((value, index) => {
+        return index + " - " + value + "<br>"
+    }).join('')
 
-    infoPerson.map(getValues)
-
-    output.innerHTML = createList
-
-    function getValues(value, index) {
-         createList += index + " - " + value + "<br>"
-    }
+    output.innerHTML = mapInfoPerson
 }
 
 function verify() {
 
     visibleOutput(true)
 
-    if (firstName.value.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "") == "alisson") {
+    let nameVerify = infoPerson.indexOf("alisson")
+    if (nameVerify != -1) {
         validName.innerHTML = "Nome encontrado."
         validName.style.backgroundColor = 'green'
         validName.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
@@ -37,16 +34,16 @@ function verify() {
         validName.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
     }
 
-    if (city.value.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "") == "ararangua") {
+    let cityVerify = infoPerson.indexOf("ararangua")
+    if (cityVerify != -1) {
         validCity.innerHTML = "Cidade encontrada."
         validCity.style.backgroundColor = 'green'
-        validName.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
+        validCity.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
     } else {
         validCity.innerHTML = "Cidade não encontrada."
         validCity.style.backgroundColor = '#d10000'
-        validName.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
+        validCity.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
     }
-
 }
 
 function reset() {
@@ -56,14 +53,12 @@ function reset() {
     infoPerson = []
 }
 
-
 function visibleOutput(isVisible) {
-    if (isVisible == true) {
+    if (isVisible) {
         validName.style.visibility = 'visible'
         validCity.style.visibility = 'visible'
     } else {
         validName.style.visibility = 'hidden'
         validCity.style.visibility = 'hidden'
     }
-
 } 
