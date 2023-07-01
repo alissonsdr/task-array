@@ -12,8 +12,8 @@ function save() {
 
     infoPerson.push(firstName.value, subName.value, city.value)
 
-    let mapInfoPerson = infoPerson.map((value, index) => {
-        return index + " - " + value + "<br>"
+    let mapInfoPerson = infoPerson.map((infos, index) => {
+        return index + " - " + infos + "<br>"
     }).join('')
 
     output.innerHTML = mapInfoPerson
@@ -23,7 +23,14 @@ function verify() {
 
     visibleOutput(true)
 
-    let nameVerify = infoPerson.indexOf("alisson")
+    let infoPersonVerify = infoPerson.map((infos) => {
+        console.log(infos)
+        return infos.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+    })
+
+    console.log(infoPersonVerify)
+
+    let nameVerify = infoPersonVerify.indexOf("alisson")
     if (nameVerify != -1) {
         validName.innerHTML = "Nome encontrado."
         validName.style.backgroundColor = 'green'
@@ -34,7 +41,7 @@ function verify() {
         validName.style.boxShadow = '5px 10px 15px rgba(0, 0, 0, 0.11)'
     }
 
-    let cityVerify = infoPerson.indexOf("ararangua")
+    let cityVerify = infoPersonVerify.indexOf("ararangua")
     if (cityVerify != -1) {
         validCity.innerHTML = "Cidade encontrada."
         validCity.style.backgroundColor = 'green'
